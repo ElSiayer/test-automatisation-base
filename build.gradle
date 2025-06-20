@@ -24,6 +24,12 @@ dependencies {
             'junit:junit:4.13.2'
 }
 
+// para ejecutar los tests de Karate runner
+task karateExecute(type: JavaExec) {
+    classpath = sourceSets.test.runtimeClasspath
+    main = 'com.intuit.karate.Main'
+}
+
 test {
     useJUnitPlatform()
 }

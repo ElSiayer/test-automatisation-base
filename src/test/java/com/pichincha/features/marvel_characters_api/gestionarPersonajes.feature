@@ -18,7 +18,7 @@ Feature: HU-PRACTICA Gestión de personajes de Marvel (microservicio para admini
 
   @id:2 @obtenerPersonaje @detalleExitoso200
   Scenario: T-API-HU-PRACTICA-CA02-Obtener personaje por ID exitosamente 200 - karate
-    * def characterId = '37'
+    * def characterId = '109'
     * path characterId
     When method GET
     Then status 200
@@ -37,7 +37,7 @@ Feature: HU-PRACTICA Gestión de personajes de Marvel (microservicio para admini
   @id:4 @crearPersonaje @creacionExitosa201
   Scenario: T-API-HU-PRACTICA-CA04-Crear personaje exitosamente 201 - karate
     * def requestData = read('classpath:data/marvel_characters_api/request_create_character.json')
-    * set requestData.name = requestData.name + '14'
+    * set requestData.name = requestData.name + '15'
     And request requestData
     When method POST
     Then status 201
@@ -87,7 +87,7 @@ Feature: HU-PRACTICA Gestión de personajes de Marvel (microservicio para admini
 
   @id:9 @eliminarPersonaje @eliminacionExitosa204
   Scenario: T-API-HU-PRACTICA-CA09-Eliminar personaje exitosamente 204 - karate
-    * def characterId = '88'
+    * def characterId = '90'
     * path characterId
     When method DELETE
     Then status 204
